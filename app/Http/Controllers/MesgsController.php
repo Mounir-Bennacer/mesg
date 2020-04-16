@@ -15,7 +15,8 @@ class MesgsController extends Controller
     public function index()
     {
       $mesgs = Mesgs::paginate(30);
-      return $mesgs;
+      $user = 'Mounir';
+      return view('mesgs.index', compact('mesgs','user'));
     }
 
     /**

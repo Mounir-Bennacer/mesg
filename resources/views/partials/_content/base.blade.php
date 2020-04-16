@@ -1,4 +1,8 @@
+@extends('master')
 
+@section('title', 'Dashboard')
+
+@section('content')
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 
@@ -2882,3 +2886,4 @@
 </div>
 
 <!-- end:: Content -->
+@endsection

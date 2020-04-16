@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'DashboardController@index');
 Route::resource('api/mesg', 'MesgsController');
 Route::resource('charge-affaire', 'ChargeAffaires');
 Route::get('dashboard', 'DashboardController@index');
+Route::get('stats', 'StatsController@index');
+Route::get('mesg', 'MesgsController@index');

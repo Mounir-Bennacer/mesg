@@ -2,7 +2,7 @@
 <!-- begin:: Aside -->
 <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
 	<div class="kt-aside__brand-logo">
-		<a href="index.html">
+		<a href="{{url('/')}}">
 			<img alt="Logo" src="assets/media/logos/logo-light.png" />
 		</a>
 	</div>
@@ -24,9 +24,8 @@
 				</svg></span>
 		</button>
 
-		<!--
+
 			<button class="kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left" id="kt_aside_toggler"><span></span></button>
-			-->
 	</div>
 </div>
 
