@@ -12,15 +12,11 @@
 			</svg> <span class="kt-pulse__ring"></span>
 		</span>
 
-		<!--
-                Use dot badge instead of animated pulse effect:
-                <span class="kt-badge kt-badge--dot kt-badge--notify kt-badge--sm kt-badge--brand"></span>
-            -->
 	</div>
 	<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
 		<form>
 
-			<!--[html-partial:include:{"file":"partials/_topbar/dropdown/notifications.html"}]/-->
+		@include("partials/_topbar/dropdown/notifications")
 		</form>
 	</div>
 </div>

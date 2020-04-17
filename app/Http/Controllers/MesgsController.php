@@ -16,7 +16,9 @@ class MesgsController extends Controller
     {
       $mesgs = Mesgs::paginate(30);
       $user = 'Mounir';
-      return view('mesgs.index', compact('mesgs','user'));
+      $alert = false;
+      $appi = 'Lyon';
+      return view('mesgs.index', compact('mesgs','user','alert','appi'));
     }
 
     /**

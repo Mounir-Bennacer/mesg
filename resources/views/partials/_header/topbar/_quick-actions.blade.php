@@ -16,7 +16,7 @@
 	<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
 		<form>
 
-			<!--[html-partial:include:{"file":"partials/_topbar/dropdown/quick-actions.html"}]/-->
+			@include("partials/_topbar/dropdown/quick-actions")
 		</form>
 	</div>
 </div>

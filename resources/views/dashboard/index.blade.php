@@ -1,4 +1,3 @@
-
 @extends('master')
 
 @section('title', 'Dashboard')
@@ -2887,4 +2886,10 @@
 </div>
 
 <!-- end:: Content -->
+@endsection
+
+@section('scripts')
+  <script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+  <script src="assets/js/pages/dashboard.js" type="text/javascript"></script>
+
 @endsection
