@@ -18,4 +18,10 @@ Route::resource('api/mesg', 'MesgsController');
 Route::resource('charge-affaire', 'ChargeAffaires');
 Route::get('dashboard', 'DashboardController@index');
 Route::get('stats', 'StatsController@index');
-Route::get('mesg', 'MesgsController@index');
+
+// routes for mesg
+Route::resource('mesg', 'MesgsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -8,6 +8,7 @@ class DashboardController extends Controller
 {
   public function index(){
     $user = 'Mounir';
-    return view('dashboard.index', compact('user'));
+    $title = 'Dashboard';
+    return view('dashboard.index', compact('user','title'));
   }
 }

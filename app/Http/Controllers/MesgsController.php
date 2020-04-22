@@ -28,7 +28,9 @@ class MesgsController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Création d\'une MESG';
+        $user = 'Mounir';
+        return view('mesgs.create', compact('title','user'));
     }
 
     /**

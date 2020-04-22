@@ -29,11 +29,6 @@
 
 @include("partials/_scrolltop")
 
-@include("partials/_toolbar")
-
-@include("partials/_demo-panel")
-
-
 
 <!--[html-partial:include:{"file":"partials/_quick-panel.html"}]/-->
 

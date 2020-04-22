@@ -12,13 +12,12 @@ Contact: contact@mounirbennacer.dev
   | |\/| | (_) | |_| | .` || ||   / | _ \ _|| .` | .` |/ _ \ (__| _||   /
   |_|  |_|\___/ \___/|_|\_|___|_|_\ |___/___|_|\_|_|\_/_/ \_\___|___|_|_\
 -->
-<html lang="en">
-
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 	<!-- begin::Head -->
         <head>
                 <base href="">
                 <meta charset="utf-8" />
-                <title>APPI | {{ 'Placeholder' }}</title>
+                <title>APPI | @yield('title')</title>
                 <meta name="description" content="Updates and statistics">
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -29,21 +28,21 @@ Contact: contact@mounirbennacer.dev
                 <!--end::Fonts -->
 
                 <!--begin::Page Vendors Styles(used by this page) -->
-                <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css" />
 
                 <!--end::Page Vendors Styles -->
 
                 <!--begin::Global Theme Styles(used by all pages) -->
-                <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-                <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 
                 <!--end::Global Theme Styles -->
 
                 <!--begin::Layout Skins(used by all pages) -->
-                <link href="assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css" />
-                <link href="assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
-                <link href="assets/css/skins/brand/dark.css" rel="stylesheet" type="text/css" />
-                <link href="assets/css/skins/aside/dark.css" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
+                <link href="{{ asset('assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />
 
                 <!--end::Layout Skins -->
                 <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
@@ -92,8 +91,8 @@ Contact: contact@mounirbennacer.dev
 		<!-- end::Global Config -->
 
 		<!--begin::Global Theme Bundle(used by all pages) -->
-		<script src="assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-		<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>
+		<script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
 
 		<!--end::Global Theme Bundle -->
 
