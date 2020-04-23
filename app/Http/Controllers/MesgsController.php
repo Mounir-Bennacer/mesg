@@ -14,11 +14,20 @@ class MesgsController extends Controller
      */
     public function index()
     {
-      $mesgs = Mesgs::paginate(30);
       $user = 'Mounir';
       $alert = false;
       $appi = 'Lyon';
-      return view('mesgs.index', compact('mesgs','user','alert','appi'));
+      return view('mesgs.index', compact('user','alert','appi'));
+    }
+
+    /**
+     * Display all the data for MESGS
+     *
+     * @return \App\MESGS
+     */
+    public function getData()
+    {
+        return Mesgs::all();;
     }
 
     /**
