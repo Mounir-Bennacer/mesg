@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Mesgs;
+use App\Mesgs as Mesg;
 use Illuminate\Http\Request;
 
 class MesgsController extends Controller
 {
+
+    protected $mesg;
+    public function __construct(Mesg $mesg)
+    {
+        $this->mesg = $mesg;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +33,7 @@ class MesgsController extends Controller
      */
     public function getData()
     {
-        return Mesgs::all();;
+        return Mesg::all();
     }
 
     /**
@@ -39,6 +45,7 @@ class MesgsController extends Controller
     {
         $title = 'Création d\'une MESG';
         $user = 'Mounir';
+
         return view('mesgs.create', compact('title','user'));
     }
 
@@ -50,7 +57,26 @@ class MesgsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            $request->description,
+            $request->numero,
+            $request->programme,
+            $request->pce,
+            $request->nb_pce,
+            $request->nb_sg,
+            $request->batiment,
+            $request->commune,
+            $request->adresse,
+            $request->gtc_id,
+            $request->date_reception_mail,
+            $request->date_reception_cm,
+            $request->delai,
+            $request->date_souhaite,
+            // $request->Auth()->id
+        ];
+
+        dd($data);
+        // Mesg::create($request->all());
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Resources\MesgCollection;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'DashboardController@index');
+
 Route::get('api/mesg', 'MesgsController@getData');
+
 Route::resource('charge-affaire', 'ChargeAffaires');
 Route::get('dashboard', 'DashboardController@index');
 Route::get('stats', 'StatsController@index');
@@ -25,3 +28,6 @@ Route::resource('mesg', 'MesgsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('test', function () {
+    return new MesgCollection(App\Mesgs::all()) ;
+});
