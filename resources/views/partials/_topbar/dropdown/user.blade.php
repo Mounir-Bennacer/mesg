@@ -8,7 +8,7 @@
 		<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">S</span>
 	</div>
 	<div class="kt-user-card__name">
-		Sean Stone
+		{{ $user }}
 	</div>
 	<div class="kt-user-card__badge">
 		<span class="btn btn-success btn-sm btn-bold btn-font-md">23 messages</span>
@@ -19,16 +19,17 @@
 
 <!--begin: Navigation -->
 <div class="kt-notification">
-	<a href="custom/apps/user/profile-1/personal-information.html" class="kt-notification__item">
+	{{-- <a href="custom/apps/user/profile-1/personal-information.html" class="kt-notification__item"> --}}
+	<a href="{{ url('profile') }}" class="kt-notification__item">
 		<div class="kt-notification__item-icon">
 			<i class="flaticon2-calendar-3 kt-font-success"></i>
 		</div>
 		<div class="kt-notification__item-details">
 			<div class="kt-notification__item-title kt-font-bold">
-				My Profile
+				Mon Profile
 			</div>
 			<div class="kt-notification__item-time">
-				Account settings and more
+				Gestion de votre profile utilisateur
 			</div>
 		</div>
 	</a>
@@ -38,10 +39,10 @@
 		</div>
 		<div class="kt-notification__item-details">
 			<div class="kt-notification__item-title kt-font-bold">
-				My Messages
+				Mes Messages
 			</div>
 			<div class="kt-notification__item-time">
-				Inbox and tasks
+				Tous mes messages...
 			</div>
 		</div>
 	</a>
@@ -51,42 +52,16 @@
 		</div>
 		<div class="kt-notification__item-details">
 			<div class="kt-notification__item-title kt-font-bold">
-				My Activities
+				Mes Activitées
 			</div>
 			<div class="kt-notification__item-time">
-				Logs and notifications
-			</div>
-		</div>
-	</a>
-	<a href="custom/apps/user/profile-3.html" class="kt-notification__item">
-		<div class="kt-notification__item-icon">
-			<i class="flaticon2-hourglass kt-font-brand"></i>
-		</div>
-		<div class="kt-notification__item-details">
-			<div class="kt-notification__item-title kt-font-bold">
-				My Tasks
-			</div>
-			<div class="kt-notification__item-time">
-				latest tasks and projects
-			</div>
-		</div>
-	</a>
-	<a href="custom/apps/user/profile-1/overview.html" class="kt-notification__item">
-		<div class="kt-notification__item-icon">
-			<i class="flaticon2-cardiogram kt-font-warning"></i>
-		</div>
-		<div class="kt-notification__item-details">
-			<div class="kt-notification__item-title kt-font-bold">
-				Billing
-			</div>
-			<div class="kt-notification__item-time">
-				billing & statements <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill kt-badge--rounded">2 pending</span>
+				Logs de mes activitées
 			</div>
 		</div>
 	</a>
 	<div class="kt-notification__custom kt-space-between">
-		<a href="custom/user/login-v2.html" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
-		<a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
+		<a href="{{ url('logout') }}" target="_blank" class="btn btn-label
+                    btn-label-brand btn-sm btn-bold">Se déconnecter</a>
 	</div>
 </div>
 

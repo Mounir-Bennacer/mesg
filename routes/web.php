@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DashboardController@index');
+Route::get('/', 'DashboardController@index')->name('dashboard');
 
 Route::get('api/mesg', 'MesgsController@getData');
 
@@ -31,3 +31,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('test', function () {
     return new MesgCollection(App\Mesgs::all()) ;
 });
+
+Route::get('/register','RegistrationsController@create');
+Route::post('/register','RegistrationsController@store');
+
+Route::get('/login', 'SessionsController@create');
+Route::get('forgot', 'SessionsController@forgot');

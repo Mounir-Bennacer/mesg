@@ -71,21 +71,13 @@ Contact: contact@mounirbennacer.dev
                     }
                   };
 		</script>
-
-		<!-- end::Global Config -->
-
 		<!--begin::Global Theme Bundle(used by all pages) -->
                 <script src="{{ asset('js/app.js') }}"></script>
 		<!--end::Global Theme Bundle -->
-
-		<!--begin::Page Vendors(used by this page) -->
-
-		<!--end::Page Vendors -->
 
 		<!--begin::Page Scripts(used by this page) -->
                 @yield('scripts')
 		<!--end::Page Scripts -->
 	</body>
-
 	<!-- end::Body -->
 </html>
