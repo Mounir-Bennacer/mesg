@@ -17,6 +17,6 @@ yarn-error.log
 
 # personal rules
 /metronic
-/resources/views
+# /resources/views
 /public/assets
 *.log
