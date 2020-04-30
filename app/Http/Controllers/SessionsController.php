@@ -13,4 +13,9 @@ class SessionsController extends Controller
     public function forgot(){
         return "Forgot your password?";
     }
+
+    public function destroy(){
+        auth()->logout();
+        return redirect()->to('login');
+    }
 }

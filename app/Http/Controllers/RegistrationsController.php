@@ -22,7 +22,9 @@ class RegistrationsController extends Controller
             'password' =>  'required'
         ]);
 
-        User::create(request()->all());
+        $user = User::create(request()->all());
+
+        auth()->login($user);
         return redirect()->route('dashboard');
     }
 }
