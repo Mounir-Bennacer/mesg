@@ -5,7 +5,7 @@
 		<div class="kt-header__topbar-user">
 			<span class="kt-header__topbar-welcome kt-hidden-mobile">Bonjour,</span>
 			<span class="kt-header__topbar-username kt-hidden-mobile">{{
-			Auth::user()->prenom }}</span>
+			ucwords(Auth::user()->prenom) }}</span>
 			<img class="kt-hidden" alt="Pic" src="assets/media/users/300_25.jpg" />
 
 			<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->

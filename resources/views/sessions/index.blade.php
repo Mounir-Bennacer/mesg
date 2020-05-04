@@ -8,10 +8,10 @@
         <form class="kt-form" method="POST" action="login">
             {{ csrf_field() }}
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
+                <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off" required>
             </div>
             <div class="input-group">
-                <input class="form-control" type="password" placeholder="Mot de Passe" name="password">
+                <input class="form-control" type="password" placeholder="Mot de Passe" name="password" required>
             </div>
             <div class="row kt-login__extra">
                 <div class="col">

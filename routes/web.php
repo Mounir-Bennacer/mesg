@@ -5,16 +5,18 @@ use Illuminate\Support\Facades\Route;
 
 /* Route::group(['middleware' => ['auth']], function(){ */
 /* }); */
+Route::middleware('auth')->group(function(){
+	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+	Route::get('/', 'DashboardController@index');
+	Route::get('api/mesg', 'MesgsController@getData');
+	Route::resource('charge-affaire', 'ChargeAffaires');
+	Route::get('stats', 'StatsController@index');
 
-Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/', 'DashboardController@index');
-Route::get('api/mesg', 'MesgsController@getData');
-Route::resource('charge-affaire', 'ChargeAffaires');
-Route::get('stats', 'StatsController@index');
+	// routes for mesg
+	Route::resource('mesg', 'MesgsController');
+	Route::get('/home', 'HomeController@index')->name('home');
 
-// routes for mesg
-Route::resource('mesg', 'MesgsController');
-Route::get('/home', 'HomeController@index')->name('home');
+});
 
 
 
