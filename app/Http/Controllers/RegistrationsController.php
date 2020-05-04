@@ -19,7 +19,7 @@ class RegistrationsController extends Controller
             'nni' =>  'required',
             'gaia' =>  'required',
             'email' =>  'required|email',
-            'password' =>  'required'
+            'password' =>  'required|required'
         ]);
 
         $user = User::create(request()->all());
