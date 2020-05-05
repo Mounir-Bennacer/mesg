@@ -20,4 +20,15 @@ class Mesgs extends Model
         ];
         return $data;
     }
+
+    /**
+     * A Mesgs can have multiple users
+     *
+     * @return relationship
+     */
+    public function user(){
+        return $this->hasMany('User');
+    }
+
+
 }
