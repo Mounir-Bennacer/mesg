@@ -12,6 +12,11 @@ class SessionsController extends Controller
 	}
 
 
+    /**
+     * Creating the view for login page
+     *
+     * @return views/sessiosn/index
+     */
     public function create(){
         return view('sessions.index');
     }
@@ -24,11 +29,11 @@ class SessionsController extends Controller
 	    if(! auth()->attempt(request(['email', 'password']))){
 		    return back();
 	    }
-	    return redirect()->to('dashboard');
+	    return redirect()->home();
     }
 
     public function destroy(){
         auth()->logout();
-        return redirect()->to('login');
+        return redirect()->home();
     }
 }

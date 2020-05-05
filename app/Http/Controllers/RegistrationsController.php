@@ -19,12 +19,12 @@ class RegistrationsController extends Controller
             'nni' =>  'required',
             'gaia' =>  'required',
             'email' =>  'required|email',
-            'password' =>  'required|required'
+            'password' =>  'required|confirmed'
         ]);
 
         $user = User::create(request()->all());
 
         auth()->login($user);
-        return redirect()->route('dashboard');
+        return redirect()->home();
     }
 }
