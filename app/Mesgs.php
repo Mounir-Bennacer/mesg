@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mesgs extends Model
 {
+    protected $fillable = ['description','num','programme','pce','nb_sg','nb_pce','batiment','commune', 'adresse','date_reception_mail','date_reception_cm','delai','date_souhaite'];
+
+
     public function toArray()
     {
         $data = [

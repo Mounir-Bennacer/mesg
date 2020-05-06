@@ -6,7 +6,7 @@
 
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <!--begin::Portlet-->
             <div class="kt-portlet">
                 <div class="kt-portlet__head">
@@ -17,65 +17,79 @@
                     </div>
                 </div>
                 <!--begin::Form-->
-                <form class="kt-form" method="POST" action="/mesg">
+                <form class="kt-form kt-form--label-right" method="POST" action="/mesg">
                     {{ csrf_field() }}
                     <div class="kt-portlet__body">
-                        <div class="form-group">
-                            <label>Description</label>
-                            <input type="text" class="form-control" placeholder="description du chantier" name="description">
-                        </div>
-                        <div class="form-group">
-                            <label>Numéro</label>
-                            <input type="text" class="form-control" id="num" placeholder="Numéro" name="numero">
-                        </div>
-                        <div class="form-group">
-                            <label>Programme</label>
-                            <input type="text" class="form-control" placeholder="Nom du programme" name="programme">
-                        </div>
-                        <div class="form-group">
-                            <label>PCE</label>
-                            <input type="text" class="form-control" placeholder="PCE" name="pce">
-                        </div>
-                        <div class="form-group">
-                            <label>Nombre de PCE</label>
-                            <input type="text" class="form-control" placeholder="Nombre ?" name="nb_pce">
-                        </div>
-                        <div class="form-group">
-                            <label>Nombre de SG</label>
-                            <input type="text" class="form-control" placeholder="Nombre SG ?" name="nb_sg">
-                        </div>
-                        <div class="form-group">
-                            <label>Batiment</label>
-                            <input type="text" class="form-control" placeholder="Batiment" name="batiment">
-                        </div>
-                        <div class="form-group">
-                            <label>Adresse</label>
-                            <input type="text" class="form-control" placeholder="Adresse" name="adresse">
-                        </div>
-                        <div class="form-group">
-                            <label>Commune</label>
-                            <input type="text" class="form-control" placeholder="Commune" name="commune">
-                        </div>
                         <div class="form-group row">
-                            <label for="example-date-input" class="col-2 col-form-label">Date réception du Mail</label>
-                            <div class="col-10">
-                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_mail">
+                            <div class="col-lg-6">
+                                <label>Description</label>
+                                <input type="text" class="form-control" placeholder="description du chantier" name="description">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Numéro</label>
+                                <input type="text" class="form-control" id="num" placeholder="Numéro" name="numero">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="example-date-input" class="col-2 col-form-label">Date réception de la CM</label>
-                            <div class="col-10">
-                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_cm">
+                            <div class="col-lg-6">
+                                <label>Programme</label>
+                                <input type="text" class="form-control" placeholder="Nom du programme" name="programme">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>PCE</label>
+                                <input type="text" class="form-control" placeholder="PCE" name="pce">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label>Délai</label>
-                            <input type="text" class="form-control" placeholder="delai" name="delai">
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Nombre de PCE</label>
+                                <input type="text" class="form-control" placeholder="Nombre ?" name="nb_pce">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Nombre de SG</label>
+                                <input type="text" class="form-control" placeholder="Nombre SG ?" name="nb_sg">
+                            </div>
                         </div>
                         <div class="form-group row">
-                            <label for="example-date-input" class="col-2 col-form-label">Date souhaitée</label>
-                            <div class="col-10">
-                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_souhaite">
+                            <div class="col-lg-6">
+                                <label>Batiment</label>
+                                <input type="text" class="form-control" placeholder="Batiment" name="batiment">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Adresse</label>
+                                <input type="text" class="form-control" placeholder="Adresse" name="adresse">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Commune</label>
+                                <input type="text" class="form-control" placeholder="Commune" name="commune">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Délai</label>
+                                <input type="text" class="form-control" placeholder="delai" name="delai">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label for="date_reception_cm">Date réception de la CM</label>
+                                <div class="col-12">
+                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_cm">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="example-date-input">Date réception du Mail</label>
+                                <div class="col-12">
+                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label for="example-date-input">Date souhaitée</label>
+                                <div class="col-12">
+                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_souhaite">
+                                </div>
                             </div>
                         </div>
                     </div>

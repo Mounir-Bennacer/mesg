@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mesgs as Mesg;
 use Illuminate\Http\Request;
-
+use \App\User;
 class MesgsController extends Controller
 {
 
@@ -57,26 +57,43 @@ class MesgsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = [
-            $request->description,
-            $request->numero,
-            $request->programme,
-            $request->pce,
-            $request->nb_pce,
-            $request->nb_sg,
-            $request->batiment,
-            $request->commune,
-            $request->adresse,
-            $request->gtc_id,
-            $request->date_reception_mail,
-            $request->date_reception_cm,
-            $request->delai,
-            $request->date_souhaite,
-            // $request->Auth()->id
-        ];
+      Mesg::create([
+            'description' => request('description'),
+            'numero' => request('numero'),
+            'programme' => request('programme'),
+            'pce' => request('pce'),
+            'nb_pce' => request('nb_pce'),
+            'nb_sg' => request('nb_sg'),
+            'batiment' => request('batiment'),
+            'commune' => request('commune'),
+            'adresse' => request('adresse'),
+            'gtc_id' => request('gtc_id'),
+            'date_reception_mail' => request('date_reception_mail'),
+            'date_reception_cm' => request('date_reception_cm'),
+            'delai' => request('delai'),
+            'date_souhaite' => request('date_souhaite'),
+            'user_id' => auth()->id()
 
-        dd($data);
-        // Mesg::create($request->all());
+      ]);
+      /* $this->validate(request(),[ */
+      /*       'description' => request('description'), */
+      /*       'numero' => request('numero'), */
+      /*       'programme' => request('programme'), */
+      /*       'pce' => request('pce'), */
+      /*       'nb_pce' => request('nb_pce'), */
+      /*       'nb_sg' => request('nb_sg'), */
+      /*       'batiment' => request('batiment'), */
+      /*       'commune' => request('commune'), */
+      /*       'adresse' => request('adresse'), */
+      /*       'gtc_id' => request('gtc_id'), */
+      /*       'date_reception_mail' => request('date_reception_mail'), */
+      /*       'date_reception_cm' => request('date_reception_cm'), */
+      /*       'delai' => request('delai'), */
+      /*       'date_souhaite' => request('date_souhaite'), */
+      /*       'user_id' => auth()->id() */
+
+      /* ]); */
+
     }
 
     /**
@@ -123,4 +140,5 @@ class MesgsController extends Controller
     {
         //
     }
+
 }
