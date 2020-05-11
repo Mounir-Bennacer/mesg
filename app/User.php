@@ -30,9 +30,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function gtc(){
-      $this->hasOne('App\GTCS');
-    }
+    /* public function gtc(){ */
+    /*   $this->hasOne('App\GTCS'); */
+    /* } */
 
     /**
      * The attributes that should be cast to native types.

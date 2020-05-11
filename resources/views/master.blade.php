@@ -28,6 +28,7 @@ Contact: contact@mounirbennacer.dev
                 <!--end::Fonts -->
 
                 <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+                <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css" >
                 <!--end::Layout Skins -->
                 <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
         </head>
@@ -73,6 +74,7 @@ Contact: contact@mounirbennacer.dev
 		</script>
 		<!--begin::Global Theme Bundle(used by all pages) -->
                 <script src="{{ asset('js/app.js') }}"></script>
+                <script src="{{ asset('js/custom.js') }}"></script>
 		<!--end::Global Theme Bundle -->
 
 		<!--begin::Page Scripts(used by this page) -->

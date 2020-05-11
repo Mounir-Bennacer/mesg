@@ -97,9 +97,23 @@
                                     <select class="form-control kt-selectpicker" data-size="7" data-live-search="true">
                                         <option value="">Select</option>
                                         @foreach ($chargeAffaires as $responsable)
-                                    <option value="{{ $responsable->id }}">{{ $responsable->prenom }} {{ $responsable->nom }}</option>
+                                            <option value="{{ $responsable->id }}">{{ $responsable->prenom }} {{ $responsable->nom }}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div id="commentaire" style="height: 325px">
+                            </div>
+                        </div>
+                        <div class="form-group" id="mounir_dropzone">
+                            <div class="col-lg-12">
+                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+                                    <div class="dropzone-msg dz-message needsclick">
+                                        <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                                        <span class="dropzone-msg-desc">Upload up to 10 files</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
