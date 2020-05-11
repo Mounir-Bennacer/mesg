@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mesgs as Mesg;
+use App\ChargeAffaires;
 use Illuminate\Http\Request;
 use \App\User;
 class MesgsController extends Controller
@@ -45,8 +46,8 @@ class MesgsController extends Controller
     {
         $title = 'Création d\'une MESG';
         $user = 'Mounir';
-
-        return view('mesgs.create', compact('title','user'));
+        $chargeAffaires = ChargeAffaires::all();
+        return view('mesgs.create', compact('title','user', 'chargeAffaires'));
     }
 
     /**

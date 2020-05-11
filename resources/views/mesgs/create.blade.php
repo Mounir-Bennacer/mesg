@@ -91,6 +91,17 @@
                                     <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_souhaite">
                                 </div>
                             </div>
+                            <div class="col-lg-6">
+                                <label>Chargé d'affaires</label>
+                                <div class="col-12">
+                                    <select class="form-control kt-selectpicker" data-size="7" data-live-search="true">
+                                        <option value="">Select</option>
+                                        @foreach ($chargeAffaires as $responsable)
+                                    <option value="{{ $responsable->id }}">{{ $responsable->prenom }} {{ $responsable->nom }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="kt-portlet__foot">

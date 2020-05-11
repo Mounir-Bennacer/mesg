@@ -12,5 +12,6 @@ class CentresSeeder extends Seeder
     public function run()
     {
         //
+        factory(App\Centres::class, 30)->create();
     }
 }

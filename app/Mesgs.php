@@ -12,14 +12,14 @@ class Mesgs extends Model
     public function toArray()
     {
         $data = [
-             'id' => $this->id,
-             'description' => $this->description,
-             'num' => $this->num,
-             'programme' => $this->programme,
-             'pce' => $this->pce,
-             'nb_pce' => $this->nb_pce,
-             'batiment' => $this->batiment,
-             'commune' => $this->commune
+            'id' => $this->id,
+            'description' => $this->description,
+            'num' => $this->num,
+            'programme' => $this->programme,
+            'pce' => $this->pce,
+            'nb_pce' => $this->nb_pce,
+            'batiment' => $this->batiment,
+            'commune' => $this->commune
         ];
         return $data;
     }
@@ -31,6 +31,11 @@ class Mesgs extends Model
      */
     public function user(){
         return $this->hasMany('User');
+    }
+
+    public function chargeAffaires()
+    {
+        return $this->hasOne('App\ChargeAffaire');
     }
 
 

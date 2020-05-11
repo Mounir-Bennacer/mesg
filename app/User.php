@@ -43,10 +43,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function setPasswordAttribute($value){
-        if(\Hash::needsRehash($value)){
-            $hashed = \Hash::make($value);
-        }
-        $this->attributes['password'] = $hashed;
-    }
+    // public function setPasswordAttribute($value){
+    //     if(\Hash::needsRehash($value)){
+    //         $hashed = \Hash::make($value);
+    //     }
+    //     $this->attributes['password'] = $hashed;
+    // }
 }
