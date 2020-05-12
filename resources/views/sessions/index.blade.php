@@ -1,5 +1,5 @@
 @extends('layouts.auth')
-
+@section('title', 'Authentification')
 @section('content')
     <div class="kt-login__signin">
         <div class="kt-login__head">

@@ -6,7 +6,7 @@
     <head>
         <base href="../../../">
         <meta charset="utf-8" />
-        <title>Metronic | Login Page 2</title>
+        <title>APPI | @yield( 'title' )</title>
         <meta name="description" content="Login page example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
