@@ -28,6 +28,7 @@ Contact: contact@mounirbennacer.dev
                 <!--end::Fonts -->
 
                 <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+                <!-- <link href="{{ asset('css/dropzone.css') }}" rel="stylesheet" type="text/css" > -->
                 <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css" >
                 <!--end::Layout Skins -->
                 <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />

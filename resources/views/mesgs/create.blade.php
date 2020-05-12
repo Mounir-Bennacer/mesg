@@ -107,12 +107,12 @@
                             <div id="commentaire" style="height: 325px">
                             </div>
                         </div>
-                        <div class="form-group" id="mounir_dropzone">
+                        <div class="form-group" id="mesg-dropzone">
                             <div class="col-lg-12">
-                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone">
                                     <div class="dropzone-msg dz-message needsclick">
-                                        <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
-                                        <span class="dropzone-msg-desc">Upload up to 10 files</span>
+                                        <h3 class="dropzone-msg-title">Déposez vos fichiers ici pour les sauvegarder.</h3>
+                                        <span class="dropzone-msg-desc">Sauvegarder jusqu'à 10 fichiers simultanément</span>
                                     </div>
                                 </div>
                             </div>

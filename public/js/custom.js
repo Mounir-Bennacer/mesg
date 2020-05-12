@@ -46,14 +46,16 @@ jQuery(document).ready(function() {
 // Class definition
 var KTDropzone = (function() {
     // Private functions
-    var fileUpload = function() {
+    let fileUpload = function() {
         // multiple file upload
-        $("#mounir_dropzone").dropzone({
+        $("#kt_dropzone").dropzone({
             url: "/mesgs/fileUpload", // Set the url for your upload script location
             paramName: "file", // The name that will be used to transfer the file
             maxFiles: 10,
+            uploadMultiple:true,
             maxFilesize: 10, // MB
             addRemoveLinks: true,
+            dictRemoveFile: "Supprimer",
             accept: function(file, done) {
                 if (file.name == "justinbieber.jpg") {
                     done("Naha, you don't.");

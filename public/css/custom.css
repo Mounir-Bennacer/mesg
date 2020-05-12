@@ -1,3 +1,6 @@
-#mounir_dropzone{
+#mesg-dropzone {
     margin-top: 2rem;
+}
+.dz-error-message {
+    top: 12rem !important;
 }
