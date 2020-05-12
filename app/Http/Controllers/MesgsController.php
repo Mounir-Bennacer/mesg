@@ -21,10 +21,10 @@ class MesgsController extends Controller
      */
     public function index()
     {
-      $user = 'Mounir';
       $alert = false;
       $appi = 'Lyon';
-      return view('mesgs.index', compact('user','alert','appi'));
+      $users = User::all();
+      return view('mesgs.index', compact('alert','appi', 'users'));
     }
 
     /**

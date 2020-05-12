@@ -17,16 +17,15 @@
             <div class="kt-portlet__head-toolbar">
                 <div class="kt-portlet__head-wrapper">
                     <div class="dropdown dropdown-inline">
-                        <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown">
+                        <button type="button" class="font-weight-bold btn btn-brand btn-danger btn-icon-sm" data-toggle="dropdown">
                             <i class="flaticon2-plus"></i>
-                            <span class="kt-nav__link-text">Ajouter</span>
+                            <span href="#" class="text-light">Ajouter</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="kt-portlet__body">
-
             <!--begin: Search Form -->
             <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
                 <div class="row align-items-center">
@@ -47,13 +46,11 @@
                                     </div>
                                     <div class="kt-form__control">
                                         <select class="form-control bootstrap-select" id="kt_form_status">
-                                            <option value="">All</option>
-                                            <option value="1">Pending</option>
-                                            <option value="2">Delivered</option>
-                                            <option value="3">Canceled</option>
-                                            <option value="4">Success</option>
-                                            <option value="5">Info</option>
-                                            <option value="6">Danger</option>
+                                            <option value="">Tout</option>
+                                            <option value="1">En attente</option>
+                                            <option value="2">Programmée</option>
+                                            <option value="3">Annulé</option>
+                                            <option value="4">Reportée</option>
                                         </select>
                                     </div>
                                 </div>
@@ -86,40 +83,6 @@
 
             <!--end: Search Form -->
 
-            <!--begin: Selected Rows Group Action Form -->
-            <div class="kt-form kt-form--label-align-right kt-margin-t-20 collapse" id="kt_datatable_group_action_form1">
-                <div class="row align-items-center">
-                    <div class="col-xl-12">
-                        <div class="kt-form__group kt-form__group--inline">
-                            <div class="kt-form__label kt-form__label-no-wrap">
-                                <label class="kt-font-bold kt-font-danger-">Selected
-                                    <span id="kt_datatable_selected_number1">0</span> records:</label>
-                                </div>
-                                <div class="kt-form__control">
-                                    <div class="btn-toolbar">
-                                        <div class="dropdown">
-                                            <button type="button" class="btn btn-brand btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                Update status
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Pending</a>
-                                                <a class="dropdown-item" href="#">Delivered</a>
-                                                <a class="dropdown-item" href="#">Canceled</a>
-                                            </div>
-                                        </div>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-sm btn-danger" type="button" id="kt_datatable_delete_all1">Delete All</button>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-sm btn-success" type="button" data-toggle="modal" data-target="#kt_modal_fetch_id_server">Fetch Selected Records</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--end: Selected Rows Group Action Form -->
-            </div>
             <div class="kt-portlet__body kt-portlet__body--fit">
 
                 <!--begin: Datatable -->

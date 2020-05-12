@@ -72,48 +72,38 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6">
-                                <label for="date_reception_cm">Date réception de la CM</label>
-                                <div class="col-12">
-                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_cm">
-                                </div>
+                                <label>Date réception de la CM</label>
+                                <input class="form-control" type="date" id="example-date-input" name="date_reception_cm">
                             </div>
                             <div class="col-lg-6">
-                                <label for="example-date-input">Date réception du Mail</label>
-                                <div class="col-12">
-                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_mail">
-                                </div>
+                                <label>Date réception du Mail</label>
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_reception_mail">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6">
-                                <label for="example-date-input">Date souhaitée</label>
-                                <div class="col-12">
-                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_souhaite">
-                                </div>
+                                <label>Date souhaitée</label>
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="date_souhaite">
                             </div>
                             <div class="col-lg-6">
                                 <label>Chargé d'affaires</label>
-                                <div class="col-12">
                                     <select class="form-control kt-selectpicker" data-size="7" data-live-search="true">
                                         <option value="">Select</option>
                                         @foreach ($chargeAffaires as $responsable)
                                             <option value="{{ $responsable->id }}">{{ $responsable->prenom }} {{ $responsable->nom }}</option>
                                         @endforeach
                                     </select>
-                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="form-group-row">
                             <div id="commentaire" style="height: 325px">
                             </div>
                         </div>
                         <div class="form-group" id="mesg-dropzone">
-                            <div class="col-lg-12">
-                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone">
-                                    <div class="dropzone-msg dz-message needsclick">
-                                        <h3 class="dropzone-msg-title">Déposez vos fichiers ici pour les sauvegarder.</h3>
-                                        <span class="dropzone-msg-desc">Sauvegarder jusqu'à 10 fichiers simultanément</span>
-                                    </div>
+                            <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone">
+                                <div class="dropzone-msg dz-message needsclick">
+                                    <h3 class="dropzone-msg-title">Déposez vos fichiers ici pour les sauvegarder.</h3>
+                                    <span class="dropzone-msg-desc">Sauvegarder jusqu'à 10 fichiers simultanément</span>
                                 </div>
                             </div>
                         </div>

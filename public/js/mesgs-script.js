@@ -1,18 +1,15 @@
 "use strict";
 // Class definition
-
-var KTDatatableRecordSelectionDemo = (function() {
+var MESGAPPI = (function() {
     // Private functions
-
     var options = {
         // datasource definition
         data: {
             type: "remote",
             source: {
                 read: {
-                    url:
-                        "http://localhost:8000/api/mesg",
-                        method:'GET'
+                    url: "http://localhost:8000/api/mesg",
+                    method: "GET"
                 }
             },
             pageSize: 10,
@@ -94,19 +91,14 @@ var KTDatatableRecordSelectionDemo = (function() {
                 template: function() {
                     return '\
                     <div class="dropdown">\
-                        <a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-sm" data-toggle="dropdown">\
+                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Detail">\
                             <i class="flaticon2-settings"></i>\
                         </a>\
-                        <div class="dropdown-menu dropdown-menu-right">\
-                            <a class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>\
-                            <a class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>\
-                            <a class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>\
-                        </div>\
                     </div>\
-                    <a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edit details">\
+                    <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Edition">\
                         <i class="flaticon2-file"></i>\
                     </a>\
-                    <a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Delete">\
+                    <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-sm" title="Supprimer">\
                         <i class="flaticon2-delete"></i>\
                     </a>\
                 ';
@@ -118,16 +110,13 @@ var KTDatatableRecordSelectionDemo = (function() {
     // ajax demo
     var serverSelectorDemo = function() {
         // enable extension
-        options.extensions = {
-            checkbox: true
-        };
         options.search = {
-            input: $("#generalSearch1")
+            input: $("#generalSearch")
         };
 
         var datatable = $("#server_record_selection").KTDatatable(options);
 
-        $("#kt_form_status1").on("change", function() {
+        $("#kt_form_status").on("change", function() {
             datatable.search(
                 $(this)
                     .val()
@@ -136,7 +125,7 @@ var KTDatatableRecordSelectionDemo = (function() {
             );
         });
 
-        $("#kt_form_type1").on("change", function() {
+        $("#kt_form_type").on("change", function() {
             datatable.search(
                 $(this)
                     .val()
@@ -145,7 +134,7 @@ var KTDatatableRecordSelectionDemo = (function() {
             );
         });
 
-        $("#kt_form_status1,#kt_form_type1").selectpicker();
+        $("#kt_form_status,#kt_form_type").selectpicker();
 
         datatable.on(
             "kt-datatable--on-click-checkbox kt-datatable--on-layout-updated",
@@ -153,11 +142,11 @@ var KTDatatableRecordSelectionDemo = (function() {
                 // datatable.checkbox() access to extension methods
                 var ids = datatable.checkbox().getSelectedId();
                 var count = ids.length;
-                $("#kt_datatable_selected_number1").html(count);
+                $("#kt_datatable_selected_number").html(count);
                 if (count > 0) {
-                    $("#kt_datatable_group_action_form1").collapse("show");
+                    $("#kt_datatable_group_action_form").collapse("show");
                 } else {
-                    $("#kt_datatable_group_action_form1").collapse("hide");
+                    $("#kt_datatable_group_action_form").collapse("hide");
                 }
             }
         );
@@ -192,5 +181,5 @@ var KTDatatableRecordSelectionDemo = (function() {
 })();
 
 jQuery(document).ready(function() {
-    KTDatatableRecordSelectionDemo.init();
+    MESGAPPI.init();
 });
