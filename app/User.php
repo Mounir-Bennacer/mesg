@@ -43,6 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function commentaire(){
+        return $this->hasMany(App\Commentaires);
+    }
     // public function setPasswordAttribute($value){
     //     if(\Hash::needsRehash($value)){
     //         $hashed = \Hash::make($value);
