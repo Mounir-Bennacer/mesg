@@ -52,7 +52,7 @@ var KTDropzone = (function() {
             url: "/mesgs/fileUpload", // Set the url for your upload script location
             paramName: "file", // The name that will be used to transfer the file
             maxFiles: 10,
-            uploadMultiple:true,
+            uploadMultiple: true,
             maxFilesize: 10, // MB
             addRemoveLinks: true,
             dictRemoveFile: "Supprimer",
@@ -76,4 +76,14 @@ var KTDropzone = (function() {
 
 KTUtil.ready(function() {
     KTDropzone.init();
+});
+
+//#############################################################
+//                                                            #
+//                         TOOLTIP                            #
+//                                                            #
+//#############################################################
+
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip();
 });
