@@ -10,7 +10,7 @@ Route::middleware('auth')->group(function(){
 	Route::get('/', 'DashboardController@index')->name('home');
 	Route::resource('charge-affaire', 'ChargeAffaires');
 	Route::get('stats', 'StatsController@index');
-
+    Route::get('groupe-technique', 'MesgsController@getGtc');
 	// routes for mesg
 	Route::resource('mesg', 'MesgsController');
 	Route::get('api/mesg', 'MesgsController@getData');

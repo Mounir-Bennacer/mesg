@@ -68,7 +68,12 @@
                             </div>
                             <div class="col-lg-6">
                                 <label>Groupe Technique</label>
-                                <input type="text" class="form-control" placeholder="Groupe Technique" name="groupe_technique">
+                                <select class="form-control kt-selectpicker" data-size="7" data-live-search="true">
+                                    <option value="">Select</option>
+                                    @foreach ($groupes as $gtc)
+                                        <option value="{{ $gtc->id }}" data-toggle="tooltip" title="GTC: {{ $gtc->title }}" id="groupe-technique">{{ $gtc->description }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">

@@ -10,4 +10,15 @@ class GroupeTechnique extends Model
     {
         return $this->hasMany('App\User');
     }
+
+    public function toArray()
+    {
+        $data = [
+            'id' => $this->id,
+            'gtc' => $this->title,
+            'ville' => $this->description
+        ];
+        return $data;
+    }
+
 }

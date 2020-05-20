@@ -6,6 +6,8 @@ use App\Mesgs as Mesg;
 use App\ChargeAffaires;
 use Illuminate\Http\Request;
 use App\User;
+use App\GroupeTechnique;
+
 class MesgsController extends Controller
 {
 
@@ -44,9 +46,9 @@ class MesgsController extends Controller
      */
     public function create()
     {
-        $title = 'Création d\'une MESG';
         $chargeAffaires = ChargeAffaires::all();
-        return view('mesgs.create', compact('title', 'chargeAffaires'));
+        $groupes = $this->getGtc();
+        return view('mesgs.create', compact('chargeAffaires', 'groupes'));
     }
 
     /**
@@ -57,24 +59,29 @@ class MesgsController extends Controller
      */
     public function store(Request $request)
     {
-      Mesg::create([
-            'description' => request('description'),
-            'numero' => request('numero'),
+
+        dd($request);
+        Mesg::create([
             'programme' => request('programme'),
-            'pce' => request('pce'),
+            'num' => request('numero'),
             'nb_pce' => request('nb_pce'),
             'nb_sg' => request('nb_sg'),
-            'batiment' => request('batiment'),
-            'commune' => request('commune'),
             'adresse' => request('adresse'),
-            'gtc_id' => request('gtc_id'),
+            'code_postal' => request('code_postal'),
+            'commune' => request('commune'),
+            'batiment' => request('batiment'),
+            'gtc_id' => request('groupe_technique'),
+            'charge_affaire_id' => request('responsable'),
+            'delai' => request('delai'),
             'date_reception_mail' => request('date_reception_mail'),
             'date_reception_cm' => request('date_reception_cm'),
-            'delai' => request('delai'),
             'date_souhaite' => request('date_souhaite'),
             'user_id' => auth()->id()
-
       ]);
+            /* $table->integer('gtc_id'); */
+            /* $table->integer('user_id'); */
+            /* $table->integer('charge_affaire_id'); */
+
       /* $this->validate(request(),[ */
       /*       'description' => request('description'), */
       /*       'numero' => request('numero'), */
@@ -139,6 +146,11 @@ class MesgsController extends Controller
     public function destroy(Mesgs $mesgs)
     {
         //
+    }
+
+    public function getGtc()
+    {
+        return GroupeTechnique::all();
     }
 
 }

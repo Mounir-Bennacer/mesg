@@ -15,21 +15,20 @@ class CreateMesgsTable extends Migration
     {
         Schema::create('mesgs', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('description');
             $table->integer('gtc_id');
             $table->integer('user_id');
             $table->integer('charge_affaire_id');
-            $table->integer('num');
             $table->string('programme');
-            $table->bigInteger('pce');
-            $table->integer('nb_pce');
+            $table->integer('num');
             $table->integer('nb_sg');
-            $table->string('batiment');
-            $table->string('commune');
+            $table->integer('nb_pce');
             $table->string('adresse');
+            $table->string('code_postal');
+            $table->string('commune');
+            $table->string('batiment');
+            $table->integer('delai');
             $table->date('date_reception_mail');
             $table->date('date_reception_cm');
-            $table->integer('delai');
             $table->date('date_souhaite');
             $table->timestamps();
         });

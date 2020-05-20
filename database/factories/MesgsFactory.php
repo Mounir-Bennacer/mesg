@@ -8,20 +8,19 @@ use \App\Users;
 
 $factory->define(Mesgs::class, function (Faker $faker) {
     return [
-        "description" => $faker->sentence(6),
-        "num" => $faker->randomDigit(),
         "programme" => $faker->word(2),
-        "pce" => $faker->randomNumber(),
+        "num" => $faker->randomDigit(),
         "nb_pce" => $faker->randomNumber(2),
         "nb_sg" => $faker->randomNumber(1),
-        "batiment" => $faker->word(2),
-        "commune" => $faker->city(),
         "adresse" => $faker->streetAddress(),
+        "code_postal" => $faker->postcode(),
+        "commune" => $faker->city(),
+        "batiment" => $faker->word(2),
         "gtc_id" => $faker->randomNumber(1),
         "charge_affaire_id" => $faker->randomNumber(1),
+        "delai" => $faker->randomNumber(2),
         "date_reception_mail" => $faker->dateTime(),
         "date_reception_cm" => $faker->dateTime(),
-        "delai" => $faker->randomNumber(2),
         "date_souhaite" => $faker->dateTime(),
         "user_id" => $faker->randomNumber(1)
     ];
