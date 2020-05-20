@@ -8,8 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(GroupeTechnique::class, function (Faker $faker) {
     return [
         //
-        'user_id' => 6,
-        'title' => '191',
-        'description' => 'Lyon'
+        'title' => $faker->randomNumber(3),
+        'description' => $faker->city()
     ];
 });

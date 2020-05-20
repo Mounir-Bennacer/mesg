@@ -22,24 +22,15 @@
                     <div class="kt-portlet__body">
                         <div class="form-group row">
                             <div class="col-lg-6">
-                                <label>Description</label>
-                                <input type="text" class="form-control" placeholder="description du chantier" name="description">
+                                <label>Programme</label>
+                                <input type="text" class="form-control" placeholder="Nom du programme" name="programme">
                             </div>
                             <div class="col-lg-6">
                                 <label>Numéro</label>
                                 <input type="text" class="form-control" id="num" placeholder="Numéro" name="numero">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-lg-6">
-                                <label>Programme</label>
-                                <input type="text" class="form-control" placeholder="Nom du programme" name="programme">
-                            </div>
-                            <div class="col-lg-6">
-                                <label>PCE</label>
-                                <input type="text" class="form-control" placeholder="PCE" name="pce">
-                            </div>
-                        </div>
+
                         <div class="form-group row">
                             <div class="col-lg-6">
                                 <label>Nombre de PCE</label>
@@ -52,12 +43,12 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6">
-                                <label>Batiment</label>
-                                <input type="text" class="form-control" placeholder="Batiment" name="batiment">
-                            </div>
-                            <div class="col-lg-6">
                                 <label>Adresse</label>
                                 <input type="text" class="form-control" placeholder="Adresse" name="adresse">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Code Postal</label>
+                                <input type="text" class="form-control" placeholder="Code Postal" name="code_postal">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -66,8 +57,18 @@
                                 <input type="text" class="form-control" placeholder="Commune" name="commune">
                             </div>
                             <div class="col-lg-6">
+                                <label>Adresse</label>
+                                <input type="text" class="form-control" placeholder="Adresse" name="adresse">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
                                 <label>Délai</label>
                                 <input type="text" class="form-control" placeholder="delai" name="delai">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Groupe Technique</label>
+                                <input type="text" class="form-control" placeholder="Groupe Technique" name="groupe_technique">
                             </div>
                         </div>
                         <div class="form-group row">

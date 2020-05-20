@@ -15,7 +15,7 @@ class CreateGroupeTechniquesTable extends Migration
     {
         Schema::create('groupe_techniques', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            /* $table->integer('user_id'); */
             $table->string('title');
             $table->string('description');
             $table->timestamps();

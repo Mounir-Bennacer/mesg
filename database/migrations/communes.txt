@@ -1,0 +1,12 @@
+SQLSTATE[23000]:
+Integrity constraint violation:
+19 UNIQUE constraint failed:
+users.groupe_technique_id
+(SQL:
+
+
+
+insert into "users"
+("nom", "prenom", "nni", "gaia", "groupe_technique_id", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at")
+values
+(Hane, Ford, 48571, EN3519, 0, corwin.wilmer@example.com, 2020-05-20 08:35:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, nyHB3vzScm, 2020-05-20 08:35:07, 2020-05-20 08:35:07))

@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('gaia');
             $table->string('telephone')->nullable();
             $table->string('email')->unique();
+            $table->smallInteger('groupe_technique_id')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

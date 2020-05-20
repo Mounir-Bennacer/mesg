@@ -18,7 +18,7 @@ class User extends Authenticatable
     protected $fillable = [
         'id','nom', 'prenom','nni',
         'gaia','telephone','email',
-        'password'
+        'password','groupe_technique_id'
     ];
 
     /**
@@ -30,9 +30,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /* public function gtc(){ */
-    /*   $this->hasOne('App\GTCS'); */
-    /* } */
 
     /**
      * The attributes that should be cast to native types.
@@ -52,4 +49,13 @@ class User extends Authenticatable
     //     }
     //     $this->attributes['password'] = $hashed;
     // }
+    public function groupe_technique()
+    {
+        return $this->hasOne('App\GroupeTechnique');
+    }
+
+    public function mesg()
+    {
+        return $this->hasMany('App\Mesgs');
+    }
 }

@@ -13,6 +13,6 @@ class GroupeTechniqueSeeder extends Seeder
     public function run()
     {
         //
-        factory(GroupeTechnique::class, 1)->create();
+        factory(GroupeTechnique::class, 100)->create();
     }
 }
