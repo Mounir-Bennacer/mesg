@@ -57,8 +57,8 @@
                                 <input type="text" class="form-control" placeholder="Commune" name="commune">
                             </div>
                             <div class="col-lg-6">
-                                <label>Adresse</label>
-                                <input type="text" class="form-control" placeholder="Adresse" name="adresse">
+                                <label>Batiment</label>
+                                <input type="text" class="form-control" placeholder="Batiment" name="batiment">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -96,7 +96,7 @@
                                     <select class="form-control kt-selectpicker" data-size="7" data-live-search="true">
                                         <option value="">Select</option>
                                         @foreach ($chargeAffaires as $responsable)
-                                            <option value="{{ $responsable->id }}" data-toggle="tooltip" title="Fixe: {{ $responsable->telephone_fixe }} | Portable: {{ $responsable->telephone_portable }}" id="responsable">{{ $responsable->prenom }} {{ $responsable->nom }}</option>
+                                            <option value="{{ $responsable->id }}" data-toggle="tooltip" name="{{ $responsable->id }}" title="Fixe: {{ $responsable->telephone_fixe }} | Portable: {{ $responsable->telephone_portable }}" id="responsable">{{ $responsable->prenom }} {{ $responsable->nom }}</option>
                                         @endforeach
                                     </select>
                             </div>

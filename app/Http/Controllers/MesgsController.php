@@ -59,8 +59,6 @@ class MesgsController extends Controller
      */
     public function store(Request $request)
     {
-
-        dd($request);
         Mesg::create([
             'programme' => request('programme'),
             'num' => request('numero'),
@@ -70,7 +68,7 @@ class MesgsController extends Controller
             'code_postal' => request('code_postal'),
             'commune' => request('commune'),
             'batiment' => request('batiment'),
-            'gtc_id' => request('groupe_technique'),
+            'gtc_id' => request('gtc'),
             'charge_affaire_id' => request('responsable'),
             'delai' => request('delai'),
             'date_reception_mail' => request('date_reception_mail'),
