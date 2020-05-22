@@ -3,10 +3,10 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use Faker\Generator as Faker;
-use \App\Mesgs;
+use \App\Mesg;
 use \App\Users;
 
-$factory->define(Mesgs::class, function (Faker $faker) {
+$factory->define(Mesg::class, function (Faker $faker) {
     return [
         "programme" => $faker->word(2),
         "num" => $faker->randomDigit(),

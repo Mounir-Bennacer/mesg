@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
-use \App\Mesgs;
+use \App\Mesg;
 
-class MesgsSeeder extends Seeder
+class MesgSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class MesgsSeeder extends Seeder
      */
     public function run()
     {
-        factory(Mesgs::class, 350)->create();
+        factory(Mesg::class, 350)->create();
     }
 }

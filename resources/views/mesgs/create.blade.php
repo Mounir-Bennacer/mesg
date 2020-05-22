@@ -71,7 +71,7 @@
                                 <select class="form-control kt-selectpicker" data-size="7" data-live-search="true">
                                     <option value="">Select</option>
                                     @foreach ($groupes as $gtc)
-                                        <option value="{{ $gtc->id }}" data-toggle="tooltip" title="GTC: {{ $gtc->title }}" id="groupe-technique">{{ $gtc->description }}</option>
+                                        <option value="{{ $gtc->id }}" data-toggle="tooltip" title="GTC: {{ $gtc->title }}" id="groupe-technique" name="gtc">{{ $gtc->description }}</option>
                                     @endforeach
                                 </select>
                             </div>

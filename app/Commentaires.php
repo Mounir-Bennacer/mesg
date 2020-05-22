@@ -10,7 +10,7 @@ class Commentaires extends Model
         return $this->belongsTo(App\User);
     }
 
-    public function mesgs(){
-        return $this->belongsTo(App\Mesgs);
+    public function mesg(){
+        return $this->belongsTo(App\Mesg);
     }
 }

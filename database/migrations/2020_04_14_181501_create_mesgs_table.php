@@ -13,6 +13,8 @@ class CreateMesgsTable extends Migration
      */
     public function up()
     {
+        /* Schema::dropIfExists('mesgs'); */
+        /* Schema::rename('mesgs', 'mesg'); */
         Schema::create('mesgs', function (Blueprint $table) {
             $table->id();
             $table->integer('gtc_id');

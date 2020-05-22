@@ -4,28 +4,28 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Mesgs extends Model
+class Mesg extends Model
 {
-    protected $fillable = ['description','num','programme','pce','nb_sg','nb_pce','batiment','commune', 'adresse','date_reception_mail','date_reception_cm','delai','date_souhaite'];
+    protected $fillable = ['num','programme','pce','nb_sg','nb_pce','batiment','commune', 'code_postal','adresse','date_reception_mail','date_reception_cm','delai','date_souhaite'];
 
 
     public function toArray()
     {
         $data = [
             'id' => $this->id,
-            'description' => $this->description,
-            'num' => $this->num,
-            'programme' => $this->programme,
-            'pce' => $this->pce,
-            'nb_pce' => $this->nb_pce,
             'batiment' => $this->batiment,
-            'commune' => $this->commune
+            'num' => $this->num,
+            'adresse' => $this->adresse,
+            'code_postal' => $this->code_postal,
+            'commune' => $this->commune,
+            'programme' => $this->programme,
+            'nb_pce' => $this->nb_pce,
         ];
         return $data;
     }
 
     /**
-     * A Mesgs can have multiple users
+     * A Mesg can have multiple users
      *
      * @return relationship
      */

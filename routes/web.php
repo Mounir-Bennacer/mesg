@@ -13,7 +13,7 @@ Route::middleware('auth')->group(function(){
     Route::get('groupe-technique', 'MesgsController@getGtc');
 	// routes for mesg
 	Route::resource('mesg', 'MesgsController');
-	Route::get('api/mesg', 'MesgsController@getData');
+	/* Route::get('api/mesg', 'MesgsController@getData'); */
 });
 
 

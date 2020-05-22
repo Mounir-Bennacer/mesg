@@ -51,11 +51,11 @@ class User extends Authenticatable
     // }
     public function groupe_technique()
     {
-        return $this->hasOne('App\GroupeTechnique');
+        return $this->belongsTo('App\GroupeTechnique');
     }
 
     public function mesg()
     {
-        return $this->hasMany('App\Mesgs');
+        return $this->hasMany('App\Mesg');
     }
 }

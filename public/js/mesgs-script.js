@@ -55,8 +55,12 @@ var MESGAPPI = (function() {
                 title: "Commune"
             },
             {
+                field: "code_postal",
+                title: "Code Postal"
+            },
+            {
                 field: "nb_pce",
-                title: "NB PCE"
+                title: "Nb PCE"
             },
             {
                 field: "batiment",

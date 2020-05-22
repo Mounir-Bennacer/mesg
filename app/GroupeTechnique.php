@@ -21,4 +21,6 @@ class GroupeTechnique extends Model
         return $data;
     }
 
+    protected $fillable = ['title','description'];
+
 }

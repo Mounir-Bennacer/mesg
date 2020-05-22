@@ -8,6 +8,6 @@ class Charge_Affaires extends Model
 {
     public function mesg()
     {
-        return $this->hasMany('App\Mesgs');
+        return $this->hasMany('App\Mesg');
     }
 }
