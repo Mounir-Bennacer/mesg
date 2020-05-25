@@ -17,7 +17,7 @@ class UsersSeeder extends Seeder
             'prenom' => 'mounir',
             'nni' => 'I90873',
             'gaia' => 'EN4116',
-            'email' => 'mounir.bennacer@grdf.fr',
+            'email' => 'mounir@email.com',
             'telephone' => '0123456789',
             'groupe_technique_id' => 1,
             'email_verified_at' => now(),

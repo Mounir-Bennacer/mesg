@@ -101,7 +101,7 @@ class MesgsController extends Controller
      * @param  \App\Mesgs  $mesgs
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mesg $mesg)
+    public function edit(Mesgs $mesgs)
     {
         //
     }
@@ -113,7 +113,7 @@ class MesgsController extends Controller
      * @param  \App\Mesgs  $mesgs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mesg $mesg)
+    public function update(Request $request, Mesgs $mesgs)
     {
         /* $mesg = $this->mesg->findOrFail($mesgs); */
         $mesg->update($request->all());
@@ -126,7 +126,7 @@ class MesgsController extends Controller
      * @param  \App\Mesgs  $mesgs
      * @return \Illuminate\Http\Response
      */
-    public function delete(Mesg $mesg)
+    public function delete(Mesgs $mesgs)
     {
         /* $mesg = $this->findOrFail($mesgs); */
         $mesg->delete();

@@ -8,4 +8,8 @@ Use App\Mesgs;
 /*     return $request->user(); */
 /* }); */
 
-Route::resource('mesgs', 'MesgsController');
+Route::get('mesgs', 'MesgsController@index');
+Route::get('mesgs/{mesg}', 'MesgsController@show');
+Route::post('mesgs', 'MesgsController@store');
+Route::put('mesgs/{mesg}', 'MesgsController@update');
+Route::delete('mesgs', 'MesgsController@delete');
