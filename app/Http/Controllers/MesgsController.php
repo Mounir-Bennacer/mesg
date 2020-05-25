@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Mesg;
 use App\ChargeAffaires;
-use Illuminate\Http\Request;
 use App\User;
 use App\GroupeTechnique;
 
@@ -24,10 +24,12 @@ class MesgsController extends Controller
     public function index()
     {
         return $this->mesg->all();
-      /* $alert = false; */
-      /* $appi = 'Lyon'; */
-      /* $mesgs = $this->getData(); */
-      /* return view('mesgs.index', compact('alert','appi', 'mesgs')); */
+    }
+
+    public function showAll()
+    {
+        /* $mesgs = $this->index(); */
+        return view('mesgs.index', compact('mesgs'));
     }
 
     /**

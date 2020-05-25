@@ -8,7 +8,7 @@ var MESGAPPI = (function() {
             type: "remote",
             source: {
                 read: {
-                    url: "http://localhost:8000/api/mesg",
+                    url: "http://localhost:8000/api/mesgs",
                     method: "GET"
                 }
             },
