@@ -17,7 +17,7 @@ class CreateMesgsTable extends Migration
         /* Schema::rename('mesgs', 'mesg'); */
         Schema::create('mesgs', function (Blueprint $table) {
             $table->id();
-            $table->integer('gtc_id');
+            $table->integer('groupe_technique_id');
             $table->integer('user_id');
             $table->integer('charge_affaire_id');
             $table->string('programme');

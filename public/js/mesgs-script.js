@@ -9,6 +9,7 @@ var MESGAPPI = (function() {
             source: {
                 read: {
                     url: "http://localhost:8000/api/mesgs",
+                    // url: "{{ route('api/mesgs') }}",
                     method: "GET"
                 }
             },
@@ -49,6 +50,10 @@ var MESGAPPI = (function() {
             {
                 field: "programme",
                 title: "Programme"
+            },
+            {
+                field: "adresse",
+                title: "Adresse"
             },
             {
                 field: "commune",

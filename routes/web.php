@@ -10,8 +10,8 @@ Route::middleware('auth')->group(function(){
 	Route::get('stats', 'StatsController@index');
     Route::get('groupe-technique', 'MesgsController@getGtc');
 	// routes for mesg
-    /* Route::get('mesgs', 'MesgsController@showAll'); */
-    /* Route::get('mesgs/create', 'MesgsController@create'); */
+    Route::get('mesgs', 'MesgsController@showAll');
+    Route::get('mesgs/create', 'MesgsController@create');
     /* Route::post('mesgs', 'MesgsController@store'); */
 });
 

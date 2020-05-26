@@ -11,11 +11,11 @@ use App\GroupeTechnique;
 class MesgsController extends Controller
 {
 
-    protected $mesg;
-    public function __construct(Mesg $mesg)
-    {
-        $this->mesg = $mesg;
-    }
+    /* protected $mesg; */
+    /* public function __construct(Mesg $mesg) */
+    /* { */
+    /*     $this->mesg = $mesg; */
+    /* } */
     /**
      * Display a listing of the resource.
      *
@@ -23,13 +23,13 @@ class MesgsController extends Controller
      */
     public function index()
     {
-        return $this->mesg->all();
+        return Mesg::all();
     }
 
     public function showAll()
     {
         /* $mesgs = $this->index(); */
-        return view('mesgs.index', compact('mesgs'));
+        return view('mesgs.index');
     }
 
     /**
@@ -62,28 +62,27 @@ class MesgsController extends Controller
      */
     public function store(Request $request)
     {
-        $mesg = Mesg::create($request->all());
+        /* $mesg = Mesg::create($request->all()); */
+        $mesg = Mesg::create([
+            'programme' => $request->programme,
+            'num' => $request->numero,
+            'nb_pce' => $request->nb_pce,
+            'nb_sg' => $request->nb_sg,
+            'adresse' => $request->adresse,
+            'code_postal' => $request->code_postal,
+            'commune' => $request->commune,
+            'batiment' => $request->batiment,
+            'gtc_id' => $request->gtc,
+            'charge_affaire_id' => $request->responsable,
+            'delai' => $request->delai,
+            'date_reception_mail' => $request->date_reception_mail,
+            'date_reception_cm' => $request->date_reception_cm,
+            'date_souhaite' => $request->date_souhaite,
+            'charge_affaire_id' =>$request->responsable,
+            'groupe_technique_id' => $request->gtc,
+            'user_id' => auth()->id()
+      ]);
         return response()->json($mesg, 201);
-        /* Mesg::create([ */
-        /*     'programme' => request('programme'), */
-        /*     'num' => request('numero'), */
-        /*     'nb_pce' => request('nb_pce'), */
-        /*     'nb_sg' => request('nb_sg'), */
-        /*     'adresse' => request('adresse'), */
-        /*     'code_postal' => request('code_postal'), */
-        /*     'commune' => request('commune'), */
-        /*     'batiment' => request('batiment'), */
-        /*     'gtc_id' => request('gtc'), */
-        /*     'charge_affaire_id' => request('responsable'), */
-        /*     'delai' => request('delai'), */
-        /*     'date_reception_mail' => request('date_reception_mail'), */
-        /*     'date_reception_cm' => request('date_reception_cm'), */
-        /*     'date_souhaite' => request('date_souhaite'), */
-        /*     'user_id' => auth()->id() */
-      /* ]); */
-            /* $table->integer('gtc_id'); */
-            /* $table->integer('user_id'); */
-            /* $table->integer('charge_affaire_id'); */
     }
 
     /**

@@ -11,6 +11,11 @@ class GroupeTechnique extends Model
         return $this->hasMany('App\User');
     }
 
+    public function mesg()
+    {
+        return $this->hasMany('App\Mesg');
+    }
+
     public function toArray()
     {
         $data = [

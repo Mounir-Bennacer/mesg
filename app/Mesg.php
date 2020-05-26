@@ -1,8 +1,8 @@
 <?php
 
-
+namespace App;
 use Illuminate\Database\Eloquent\Model;
-namespace LaMere;
+
 class Mesg extends Model
 {
     protected $fillable = [
@@ -35,7 +35,7 @@ class Mesg extends Model
             'code_postal'=>$this->code_postal,
             'commune'=>$this->commune,
             'batiment'=>$this->batiment,
-            'gtc_id'=>$this->gtc_id,
+            'groupe_technique_id'=>$this->groupe_technique_id,
             'charge_affaire_id'=>$this->charge_affaire_id,
             'delai'=>$this->delai,
             'date_reception_mail'=>$this->date_reception_mail,
@@ -60,5 +60,9 @@ class Mesg extends Model
         return $this->hasOne('App\ChargeAffaire');
     }
 
+    public function groupeTechnique()
+    {
+        return $this->belongsTo('App\GroupeTechnique');
+    }
 
 }

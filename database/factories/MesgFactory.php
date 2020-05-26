@@ -16,7 +16,7 @@ $factory->define(Mesg::class, function (Faker $faker) {
         "code_postal" => $faker->postcode(),
         "commune" => $faker->city(),
         "batiment" => $faker->word(2),
-        "gtc_id" => $faker->randomNumber(1),
+        "groupe_technique_id" => $faker->randomNumber(1),
         "charge_affaire_id" => $faker->randomNumber(1),
         "delai" => $faker->randomNumber(2),
         "date_reception_mail" => $faker->dateTime(),
