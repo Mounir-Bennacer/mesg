@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Mesg extends Model
@@ -14,7 +15,7 @@ class Mesg extends Model
             'code_postal',
             'commune',
             'batiment',
-            'gtc_id',
+            'groupe_technique_id',
             'charge_affaire_id',
             'delai',
             'date_reception_mail',
@@ -51,18 +52,28 @@ class Mesg extends Model
      *
      * @return relationship
      */
+    /**
+     * User relatioship
+     *
+     * @return one to many relation
+     */
     public function user(){
-        return $this->hasMany('User');
+        return $this->belongsToMany(User::class);
     }
 
     public function chargeAffaires()
     {
-        return $this->hasOne('App\ChargeAffaire');
+        return $this->belongsTo(ChargeAffaire::class);
     }
 
+    /**
+     * Groupe Technique retourn une relation appartennant aux MESG
+     *
+     * @return Relationship
+     */
     public function groupeTechnique()
     {
-        return $this->belongsTo('App\GroupeTechnique');
+        return $this->belongsTo(GroupeTechnique::class);
     }
 
 }

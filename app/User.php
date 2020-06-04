@@ -41,7 +41,7 @@ class User extends Authenticatable
     ];
 
     public function commentaire(){
-        return $this->hasMany(App\Commentaires);
+        return $this->hasMany(Commentaires::class);
     }
     // public function setPasswordAttribute($value){
     //     if(\Hash::needsRehash($value)){
@@ -51,11 +51,11 @@ class User extends Authenticatable
     // }
     public function groupe_technique()
     {
-        return $this->belongsTo('App\GroupeTechnique');
+        return $this->belongsTo(GroupeTechnique::class);
     }
 
     public function mesg()
     {
-        return $this->hasMany('App\Mesg');
+        return $this->hasMany(Mesg::class);
     }
 }

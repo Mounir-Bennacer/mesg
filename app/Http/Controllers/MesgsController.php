@@ -63,6 +63,7 @@ class MesgsController extends Controller
     public function store(Request $request)
     {
         /* $mesg = Mesg::create($request->all()); */
+        dd($request->responsable);
         $mesg = Mesg::create([
             'programme' => $request->programme,
             'num' => $request->numero,
