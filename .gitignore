@@ -22,3 +22,4 @@ yarn-error.log
 # /resources/views
 /public/assets
 *.log
+docker.yml

@@ -2,6 +2,7 @@
 
 use App\Http\Resources\MesgCollection;
 use Illuminate\Support\Facades\Route;
+Use App\Mesgs;
 
 Route::middleware('auth')->group(function(){
 	Route::get('dashboard', 'DashboardController@index');
@@ -10,9 +11,15 @@ Route::middleware('auth')->group(function(){
 	Route::get('stats', 'StatsController@index');
     Route::get('groupe-technique', 'MesgsController@getGtc');
 	// routes for mesg
-    Route::get('mesgs', 'MesgsController@showAll');
-    Route::get('mesgs/create', 'MesgsController@create');
-    /* Route::post('mesgs', 'MesgsController@store'); */
+    Route::get('mesgsdata', 'MesgsController@showAll');
+
+    Route::resource('mesgs', 'MesgsController');
+    /* Route::get('mesgs', 'MesgsController@index'); */
+    /* Route::get('mesgs/create', 'MesgsController@create'); */
+    /* Route::get('mesgs/{mesg}', 'MesgsController@show'); */
+    /* Route::post('mesg', 'MesgsController@store'); */
+    /* Route::put('mesgs/{mesg}', 'MesgsController@update'); */
+    /* Route::delete('mesgs', 'MesgsController@delete'); */
 });
 
 

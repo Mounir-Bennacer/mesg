@@ -23,24 +23,14 @@ class MesgsController extends Controller
      */
     public function index()
     {
-        return Mesg::all();
+        $mesgs = Mesg::all();
+        return view('mesgs.index', compact('mesgs'));
     }
 
     public function showAll()
     {
-        /* $mesgs = $this->index(); */
-        return view('mesgs.index');
+        return Mesg::all();
     }
-
-    /**
-     * Display all the data for MESGS
-     *
-     * @return \App\MESGS
-     */
-    /* public function getData() */
-    /* { */
-    /*     return Mesg::all(); */
-    /* } */
 
     /**
      * Show the form for creating a new resource.
@@ -50,7 +40,7 @@ class MesgsController extends Controller
     public function create()
     {
         $chargeAffaires = ChargeAffaires::all();
-        $groupes = $this->getGtc();
+        $groupes = GroupeTechnique::all();
         return view('mesgs.create', compact('chargeAffaires', 'groupes'));
     }
 
@@ -63,8 +53,10 @@ class MesgsController extends Controller
     public function store(Request $request)
     {
         /* $mesg = Mesg::create($request->all()); */
+        /* dd(\Auth::user()->nom); */
         dd($request->responsable);
         $mesg = Mesg::create([
+            'user_id' => auth()->id(),
             'programme' => $request->programme,
             'num' => $request->numero,
             'nb_pce' => $request->nb_pce,
@@ -80,8 +72,7 @@ class MesgsController extends Controller
             'date_reception_cm' => $request->date_reception_cm,
             'date_souhaite' => $request->date_souhaite,
             'charge_affaire_id' =>$request->responsable,
-            'groupe_technique_id' => $request->gtc,
-            'user_id' => auth()->id()
+            'groupe_technique_id' => $request->gtc
       ]);
         return response()->json($mesg, 201);
     }
@@ -134,10 +125,4 @@ class MesgsController extends Controller
         $mesg->delete();
         return response()->json(null,204);
     }
-
-    public function getGtc()
-    {
-        return GroupeTechnique::all();
-    }
-
 }

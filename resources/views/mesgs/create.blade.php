@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <!--begin::Form-->
-                <form class="kt-form kt-form--label-right" method="POST" action="/api/mesgs">
+                <form class="kt-form kt-form--label-right" method="POST" action="{{url('mesgs')}}">
                     {{ csrf_field() }}
                     <div class="kt-portlet__body">
                         <div class="form-group row">
